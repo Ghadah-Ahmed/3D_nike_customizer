@@ -100,7 +100,7 @@ scene.add(dirLight);
 // Floor
 var floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
 var floorMaterial = new THREE.MeshPhongMaterial({
-  color: 0xcacaca,
+  color: 0xcdcdcd,
   shininess: 0 });
 var floor = new THREE.Mesh(floorGeometry, floorMaterial);
 floor.rotation.x = -0.5 * Math.PI;
@@ -121,7 +121,7 @@ controls.dampingFactor = 1/2;
 // GUI stuff
 // var gui = new dat.GUI();
 // const parameters = {
-//   color: 0xcacaca,
+//   color: 0xcdcdcd,
 //   backgroundColor: 0xededed
 // }
 
