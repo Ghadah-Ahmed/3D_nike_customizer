@@ -80,7 +80,7 @@ html {
 .option {
     background-size: cover;
     background-position: 50%;
-    background-color: #ededed;
+    /* background-color: #ededed; */
     margin-bottom: 3px;
     padding: 10px;
     height: 55px;
