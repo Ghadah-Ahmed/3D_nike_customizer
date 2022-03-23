@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D Model Color Customizer App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- We add the loader CSS here so that assets don't pop in before the bundled CSS is loaded -->
+    <style>
+    .loading {
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="loading" id="js-loader"></div>
+    <span class="drag-notice" id="js-drag-notice"><img width="90px" src="img/rotate.png"></span>
+    <div class="options">
+        <div class="option --is-active" data-option="base_red">
+            <img src="img/sneakers (3).png">
+        </div>
+        <div class="option" data-option="base_white">
+            <img src="img/sneakers.png">
+          </div>
+        <div class="option" data-option="redcollar">
+            <img src="img/sneakers (6).png">
+            </div>
+        <div class="option" data-option="cord">
+            <img src="img/sneakers (4) (1).png">
+          </div>
+        <div class="option" data-option="Lateral">
+            <img src="img/sneakers (5).png">
+        </div>
+        <div class="option" data-option="nikelogo">
+            <img src="img/nike.png">
+        </div>
+        <div class="option" data-option="lateralCords">
+            <img src="img/sneakers (2) (1).png">
+        </div>
+        <div class="option" data-option="Counter">
+            <img src="img/sneakers (1).png">
+           </div>
+        <div class="option" data-option="upper">
+            <img src="img/sneakers (7).png">
+        </div>
+        <div class="option" data-option="counterlinning">
+            البطانة      
+          </div>
+    </div>
+    <canvas id="c"></canvas>
+    <div class="controls">
+        <div class="info" dir="rtl">
+            <div class="info__message">
+                <p><strong>&nbsp;اسحب&nbsp;</strong> لتدوير المجسم. <strong>&nbsp;مرر القالب أفقيا&nbsp;</strong>لاستعراض جميع الخامات.</p>
+            </div>
+        </div>
+        <div id="js-tray" class="tray">
+            <div id="js-tray-slide" class="tray__slide"></div>
+        </div>
+    </div>
+    
+    <!-- The main three.js file -->
+    <script src='https://unpkg.com/three@0.127.0/build/three.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js" integrity="sha512-lIKG1kC5TMb1Zx32vdz1n31YJMZRknVY20U9MJ28hD3y2c0OKN0Ce5NhJji78v8zX5UOSsm+MTBOcJt7yMBnSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="materials.js"></script>
+    <script src="script.js"></script>
+    <script src="colorSwatcher.js"></script>
+</body>
+
+</html>
